@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: transparent;
+  font-feature-settings: 'cv11', 'ss01';
+  font-variant-ligatures: contextual;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  --foreground-rgb: 229, 229, 229;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8c00;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9f1a;
+}
+
+/* Selection styling */
+::selection {
+  background: #ff8c0030;
+  color: #ff8c00;
+}
+
+::-moz-selection {
+  background: #ff8c0030;
+  color: #ff8c00;
+}
+
+/* Focus outline */
+*:focus {
+  outline: 2px solid #ff8c00;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea, select {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Performance optimizations */
+* {
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, #ff8c00, #646cff);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s ease infinite;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px #ff8c0050;
+  }
+  
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+} 
+
+/* Vertical Liquid Glass Styled Dock with Navbar Design */
+.dock {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dock-item {
+  margin: 10px 0;
+  transition: transform 0.3s, color 0.3s;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dock-item:hover {
+  transform: scale(1.2);
+  color: #ff8c00;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dock-icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+  color: #ff8c00; /* Set a default color for the icons */
+  transition: color 0.3s;
+}
+
+.dock-item:hover .dock-icon {
+  color: #646cff; /* Change color on hover */
+} 
