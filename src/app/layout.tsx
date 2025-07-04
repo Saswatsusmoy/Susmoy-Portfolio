@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation'
 import ScrollToTop from '@/components/ScrollToTop'
 import { StagewiseToolbar } from '@stagewise/toolbar-next'
 import { ReactPlugin } from '@stagewise-plugins/react'
-import Dock from '../components/Dock';
+import Dock from '@/components/Dock';
 
 const inter = Inter({
   subsets: ['latin'],

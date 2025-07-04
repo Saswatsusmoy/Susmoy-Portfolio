@@ -23,7 +23,6 @@ export default function Home() {
         <ProjectsSection />
         <AboutSection />
         <SkillsSection />
-        <ContactSection />
       </div>
 
       {/* Floating Elements */}

@@ -258,6 +258,24 @@ export default function ProjectsSection() {
               </motion.div>
             ))}
           </div>
+
+          {/* CTA Button */}
+          <motion.div
+            variants={cardVariants}
+            className="text-center mt-12"
+          >
+            <motion.a
+              href="/projects"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(255, 140, 0, 0.2)' }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-background-primary/60 backdrop-blur-[12px] text-accent-primary font-mono rounded-2xl border border-accent-primary/30 hover:bg-accent-primary/10 transition-all duration-300 shadow-lg"
+            >
+              <span className="text-green-400">$</span>
+              <span>git checkout all-projects</span>
+            </motion.a>
+          </motion.div>
         </motion.div>
       </div>
 

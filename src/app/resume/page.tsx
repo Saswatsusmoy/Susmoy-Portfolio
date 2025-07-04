@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Github, Linkedin, Briefcase, Download, Lightbulb } from 'lucide-react';
 import jsPDF from 'jspdf';
+import Navigation from '@/components/Navigation';
 
 const resume = {
   name: 'Saswat Susmoy Sahoo',
@@ -194,7 +195,8 @@ export default function ResumePage() {
 
   return (
     <>
-      <div className="h-24" /> {/* Spacer */}
+      <Navigation />
+      <div className="h-16 md:h-24" /> {/* Spacer */}
       <main className="min-h-screen bg-background-primary text-text-primary p-4 md:p-8">
         <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         

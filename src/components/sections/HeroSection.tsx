@@ -167,7 +167,7 @@ export default function HeroSection() {
           {/* Terminal-style header */}
           <motion.div
             variants={itemVariants}
-            className="font-mono text-sm text-text-secondary/80 mb-6"
+            className="font-mono text-sm text-text-secondary/80 mb-6 hidden sm:block"
           >
             <span className="text-accent-primary">saswat@genai</span>
             <span className="text-text-secondary/60">:</span>
@@ -269,13 +269,12 @@ export default function HeroSection() {
             ].map(({ Icon, label }, index) => (
               <motion.div
                 key={label}
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
                 className="flex flex-col items-center space-y-2 text-text-secondary hover:text-accent-primary transition-colors duration-300"
               >
                 <div className="relative p-3 rounded-2xl bg-background-secondary/30 backdrop-blur-sm border border-background-tertiary/30">
                   <Icon size={24} className="drop-shadow-lg" />
-                  <div className="absolute inset-0 bg-accent-primary/10 rounded-2xl blur-xl opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <span className="text-xs font-mono font-medium tracking-wide">{label}</span>
               </motion.div>

@@ -21,6 +21,11 @@ const socials = [
     icon: Mail,
     url: 'mailto:saswatsusmoy8013@gmail.com',
   },
+  {
+    name: 'X',
+    icon: Twitter,
+    url: 'https://x.com/SusmoySaswat',
+  },
 ]
 
 export default function ContactSection() {

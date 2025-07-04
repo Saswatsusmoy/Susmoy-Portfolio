@@ -262,20 +262,6 @@ export default function AboutSection() {
               </div>
             </motion.div>
           </div>
-
-          {/* Bottom CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center mt-12"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(255, 140, 0, 0.2)' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 border border-accent-primary/50 text-accent-primary hover:bg-accent-primary/10 hover:border-accent-primary rounded-2xl transition-all duration-300 font-mono backdrop-blur-sm"
-            >
-              {'> explore_projects()'}
-            </motion.button>
-          </motion.div>
         </motion.div>
       </div>
 
