@@ -6,8 +6,8 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const socialLinks = [
-  { icon: faGithub, href: 'https://github.com/saswatsusmoy' },
-  { icon: faLinkedin, href: 'https://www.linkedin.com/in/saswat-susmoy-sahoo-638796241/' },
+  { icon: faGithub, href: 'https://github.com/Saswatsusmoy' },
+  { icon: faLinkedin, href: 'https://www.linkedin.com/in/saswat-susmoy-sahoo/' },
   { icon: faTwitter, href: 'https://x.com/saswat_susmoy' },
   { icon: faEnvelope, href: 'mailto:saswatsusmoy8013@gmail.com' },
 ];

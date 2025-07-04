@@ -9,12 +9,12 @@ const socials = [
   {
     name: 'GitHub',
     icon: Github,
-    url: 'https://github.com/saswatsusmoy',
+    url: 'https://github.com/Saswatsusmoy',
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    url: 'https://linkedin.com/in/saswat-susmoy-sahoo',
+    url: 'https://www.linkedin.com/in/saswat-susmoy-sahoo/',
   },
   {
     name: 'Email',

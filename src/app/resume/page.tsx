@@ -10,8 +10,8 @@ const resume = {
   contact: {
     email: 'saswatsusmoy8013@gmail.com',
     phone: '+91 93481 87633',
-    github: 'https://github.com/saswatsusmoy',
-    linkedin: 'https://linkedin.com/in/saswat-susmoy-sahoo-638796241/'
+    github: 'https://github.com/Saswatsusmoy',
+    linkedin: 'https://www.linkedin.com/in/saswat-susmoy-sahoo/'
   },
   education: [
     {

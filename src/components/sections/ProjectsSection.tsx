@@ -12,32 +12,32 @@ const projectCategories = {
       description:
         'Unified benchmarking system supporting OpenAI, Anthropic, HuggingFace with standardized evaluation metrics. Features 4-bit/8-bit quantization, LoRA/PEFT integration, and JSON-RPC 2.0 based Model Context Protocol server.',
       tags: ['LLM', 'Benchmarking', 'MCP', 'Quantization'],
-      github: 'https://github.com/saswat/llm-benchmarking-suite',
-      demo: 'https://benchmark.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Multilingual Semantic Search for NIC Codes',
       description:
         'AI-powered multi-lingual search engine for National Industrial Classification system with edge-device local inferencing. Achieved sub-100ms performance for English and Hindi queries with speech recognition. Top 5 solution nationwide.',
       tags: ['Semantic Search', 'NLP', 'Multilingual', 'Edge Computing'],
-      github: 'https://github.com/saswat/multilingual-nic-search',
-      demo: 'https://nicsearch.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'FinanceScope - Finance Research Agent',
       description:
         'UI-based finance research platform with APIs for live stock data, specialized agents for technical analysis, risk assessment, news sentiment analysis, and automated report generation with real-time charts.',
       tags: ['Finance', 'Agents', 'LLMs'],
-      github: 'https://github.com/saswat/financescope',
-      demo: 'https://financescope.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Text-to-SQL Pipeline with Multi-Agent Validation',
       description:
         'Enterprise-grade natural language to SQL system with multi-agent validation framework. Features query optimization, semantic parsing, and compliance checking for database interactions with 95% accuracy on complex business queries.',
       tags: ['Text-to-SQL', 'Multi-Agent', 'Query Optimization', 'Enterprise'],
-      github: 'https://github.com/saswat/text-to-sql-pipeline',
-      demo: 'https://text-to-sql.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
   ],
   'Web-Dev': [
@@ -46,32 +46,32 @@ const projectCategories = {
       description:
         'A comprehensive web application for tracking investments, visualizing portfolio performance, and managing assets across multiple accounts. Features interactive charts, real-time data integration, and secure authentication.',
       tags: ['Finance', 'Dashboard', 'React'],
-      github: 'https://github.com/saswat/portfolio-manager',
-      demo: 'https://portfolio-manager.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'E-commerce Platform',
       description:
         'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
       tags: ['E-commerce', 'Full-Stack', 'Payments'],
-      github: 'https://github.com/saswat/e-commerce-platform',
-      demo: 'https://ecommerce.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Real-Time Chat Application',
       description:
         'A scalable real-time chat app built with React, Node.js, and Socket.io, supporting private and group messaging, typing indicators, and message persistence. Features responsive design and dark mode for a modern user experience.',
       tags: ['Chat', 'Socket.io', 'Real-time'],
-      github: 'https://github.com/saswat/realtime-chat-app',
-      demo: 'https://chat.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Personal Blog Platform',
       description:
         'A full-featured blog platform with Markdown support, user authentication, and a custom CMS. Built with Next.js and MongoDB, it offers SEO optimization, fast static generation, and a beautiful, minimal UI.',
       tags: ['Blog', 'Next.js', 'CMS'],
-      github: 'https://github.com/saswat/personal-blog',
-      demo: 'https://blog.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
   ],
   'Machine Learning': [
@@ -80,32 +80,32 @@ const projectCategories = {
       description:
         'A real-time fraud detection system using machine learning to analyze transaction patterns and identify anomalies with high accuracy, minimizing false positives.',
       tags: ['Fraud Detection', 'Classification', 'ML'],
-      github: 'https://github.com/saswat/credit-card-fraud-detection',
-      demo: 'https://fraud-detection-demo.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Plant Disease Detection on Raspberry Pi',
       description:
         'An IoT solution that leverages a lightweight CNN on a Raspberry Pi to identify plant diseases from leaf images, enabling rapid, on-site diagnostics for farmers.',
       tags: ['Plant Disease', 'CNN', 'IoT'],
-      github: 'https://github.com/saswat/plant-disease-detection',
-      demo: 'https://plant-disease-demo.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Handwriting Recognition Analysis',
       description:
         'A neural network that recognizes and transcribes handwritten text from images, using the MNIST dataset for training a robust character recognition model.',
       tags: ['Handwriting', 'CNN', 'PyTorch'],
-      github: 'https://github.com/saswat/handwriting-recognition',
-      demo: 'https://handwriting-demo.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
     {
       title: 'Medical Image Segmentation with U-Net',
       description:
         'Developed a deep learning pipeline using the U-Net architecture for precise segmentation of medical images, enabling automated detection of anomalies in MRI and CT scans. The project demonstrates advanced preprocessing, data augmentation, and post-processing techniques for robust performance on real-world datasets.',
       tags: ['Segmentation', 'U-Net', 'Medical Imaging'],
-      github: 'https://github.com/saswat/medical-image-segmentation',
-      demo: 'https://medical-segmentation-demo.saswat.dev',
+      github: 'https://github.com/Saswatsusmoy',
+      demo: '#',
     },
   ],
 };
