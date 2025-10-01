@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ChevronDown, Brain, Zap, Code, MessageSquare, Database, Bot } from 'lucide-react'
+import { ChevronDown, Brain, Database, Bot } from 'lucide-react'
+import Link from 'next/link'
 
 const typewriterTexts = [
   'Generative AI',
@@ -237,24 +238,24 @@ export default function HeroSection() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-3 justify-center items-center"
           >
-            <motion.a
-              href="https://www.notion.so/21cd07e417cf801cb32cefa87f4d13dd?v=21cd07e417cf808c98f9000c9f2ac5f8&source=copy_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(255, 140, 0, 0.2)' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-background-primary/60 backdrop-blur-[12px] text-accent-primary font-semibold rounded-2xl border border-accent-primary/30 hover:bg-accent-primary/10 transition-all duration-300 shadow-lg"
-            >
-              View Projects
-            </motion.a>
-            <motion.button
-              onClick={() => window.open('/resume', '_blank')}
-              whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(255, 140, 0, 0.15)' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 border border-accent-primary/50 text-accent-primary bg-background-primary/40 backdrop-blur-[12px] hover:bg-accent-primary/5 hover:border-accent-primary/70 rounded-2xl transition-all duration-300 shadow-lg"
-            >
-              Download Resume
-            </motion.button>
+            <Link href="/projects">
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(255, 140, 0, 0.2)' }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 bg-background-primary/60 backdrop-blur-[12px] text-accent-primary font-semibold rounded-2xl border border-accent-primary/30 hover:bg-accent-primary/10 transition-all duration-300 shadow-lg cursor-pointer"
+              >
+                View Projects
+              </motion.div>
+            </Link>
+            <Link href="/resume">
+              <motion.div
+                whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(255, 140, 0, 0.15)' }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-3 border border-accent-primary/50 text-accent-primary bg-background-primary/40 backdrop-blur-[12px] hover:bg-accent-primary/5 hover:border-accent-primary/70 rounded-2xl transition-all duration-300 shadow-lg cursor-pointer"
+              >
+                View Resume
+              </motion.div>
+            </Link>
           </motion.div>
 
           {/* Tech stack icons */}
@@ -323,4 +324,4 @@ export default function HeroSection() {
       </div>
     </section>
   )
-} 
+}
