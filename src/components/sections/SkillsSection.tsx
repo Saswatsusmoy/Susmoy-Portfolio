@@ -14,9 +14,7 @@ import {
   SiHtml5, 
   SiCss3
 } from 'react-icons/si'
-import { 
-  DiGoogleCloudPlatform 
-} from 'react-icons/di'
+import { BiLogoPostgresql } from "react-icons/bi";
 import { 
   FaDatabase,
   FaReact,
@@ -76,6 +74,7 @@ const techStackCategories = [
     techs: [
       { name: 'MySQL', icon: SiMysql, color: '#336791' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47a248' },
+      { name: 'PostgreSQL', icon: BiLogoPostgresql, color: '#336791' },
     ]
   },
   {
@@ -169,7 +168,7 @@ export default function SkillsSection() {
                   <h4 className="font-medium text-text-primary mb-2 text-center text-base">
                     {category.title}
                   </h4>
-                  <div className="flex overflow-x-auto space-x-4 py-2">
+                  <div className="flex flex-wrap justify-center gap-3 py-2">
                     {category.techs.map((tech, techIndex) => {
                       const IconComponent = tech.icon
                       return (
@@ -316,4 +315,4 @@ export default function SkillsSection() {
       <div className="absolute bottom-40 right-10 w-32 h-32 bg-accent-secondary/2 rounded-full blur-3xl animate-pulse" />
     </section>
   )
-} 
+}

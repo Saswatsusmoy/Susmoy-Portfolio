@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Brain, Target, Lightbulb, Rocket } from 'lucide-react'
+import { Brain, Target, Lightbulb, Rocket, Zap, Settings, Bot, BarChart3 } from 'lucide-react'
 
 const stats = [
   { number: '25+', label: 'AI Projects Built', icon: Brain },
@@ -15,22 +15,22 @@ const principles = [
   {
     title: 'Production-Grade AI Systems',
     description: 'Deploying enterprise-ready LLM solutions with 99.9% uptime, efficient resource utilization, and seamless scaling from prototype to production',
-    icon: '⚡',
+    icon: <Zap className="w-4 h-4 text-accent-primary" />,
   },
   {
     title: 'MLOps & Model Governance',
     description: 'Implementing robust CI/CD pipelines for model deployment, automated testing frameworks, and comprehensive monitoring for model drift and performance',
-    icon: '🔧',
+    icon: <Settings className="w-4 h-4 text-accent-primary" />,
   },
   {
     title: 'Agentic AI Architecture',
     description: 'Designing multi-agent systems with advanced reasoning capabilities, tool integration, and autonomous decision-making for complex business workflows',
-    icon: '🤖',
+    icon: <Bot className="w-4 h-4 text-accent-primary" />,
   },
   {
     title: 'Performance Optimization',
     description: 'Leveraging quantization, LoRA/PEFT fine-tuning, and efficient inference techniques to maximize model performance while minimizing computational costs',
-    icon: '📊',
+    icon: <BarChart3 className="w-4 h-4 text-accent-primary" />,
   },
 ]
 
@@ -143,17 +143,6 @@ export default function AboutSection() {
                       <p className="relative text-sm text-text-secondary leading-relaxed">
                         <span className="text-accent-primary font-semibold">Model Development & Optimization:</span>{' '}
                         I specialize in building and fine-tuning machine learning models, implementing performance optimization techniques, and creating evaluation frameworks that ensure reliability and efficiency across diverse use cases and deployment environments.
-                      </p>
-                    </div>
-
-                    <div className="relative p-4 rounded-3xl bg-background-primary/60 backdrop-blur-[18px] border border-background-tertiary/40 shadow-lg shadow-black/20 overflow-hidden">
-                      {/* Animated light reflection overlay */}
-                      <div className="absolute left-0 top-0 w-full h-full pointer-events-none">
-                        <div className="absolute left-1/4 top-0 w-1/2 h-1/3 bg-white/5 blur-xl rounded-full animate-pulse" style={{ filter: 'blur(12px)' }} />
-                      </div>
-                      <p className="relative text-sm text-text-secondary leading-relaxed">
-                        <span className="text-accent-primary font-semibold">Full-Stack Innovation:</span>{' '}
-                        From concept to deployment, I build end-to-end solutions that bridge the gap between research and production. My work encompasses data processing pipelines, intelligent automation systems, and user-centric applications designed for real-world impact.
                       </p>
                     </div>
                   </div>

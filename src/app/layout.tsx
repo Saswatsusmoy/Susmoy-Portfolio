@@ -6,6 +6,7 @@ import ScrollToTop from '@/components/ScrollToTop'
 import { StagewiseToolbar } from '@stagewise/toolbar-next'
 import { ReactPlugin } from '@stagewise-plugins/react'
 import Dock from '@/components/Dock';
+import Link from 'next/link'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -73,13 +74,15 @@ export default function RootLayout({
       <body className={`${inter.variable} ${jetbrainsMono.variable} bg-background-primary text-text-primary antialiased font-sans`}>
         <div className="relative min-h-screen overflow-x-hidden">
           {/* Logo in top left corner */}
-          <div className="fixed top-6 left-6 z-50">
-            <div className="flex items-center space-x-2 bg-background-primary/80 backdrop-blur-xl border border-background-tertiary/50 rounded-2xl shadow-2xl shadow-black/20 px-4 py-2">
-              <span className="text-accent-primary font-mono text-lg font-bold">{'{'}</span>
-              <span className="text-text-primary font-sans font-semibold text-lg">saswat</span>
-              <span className="text-accent-primary font-mono text-lg font-bold">{'}'}</span>
+            <div className="fixed top-6 left-6 z-50">
+              <Link href="/" className="block">
+                <div className="flex items-center space-x-2 bg-background-primary/80 backdrop-blur-xl border border-background-tertiary/50 rounded-2xl shadow-2xl shadow-black/20 px-4 py-2 hover:bg-background-secondary/80 transition-colors cursor-pointer">
+                <span className="text-accent-primary font-mono text-lg font-bold">{'{'}</span>
+                <span className="text-text-primary font-sans font-semibold text-lg">saswat</span>
+                <span className="text-accent-primary font-mono text-lg font-bold">{'}'}</span>
+                </div>
+              </Link>
             </div>
-          </div>
           
           <Navigation />
           {children}
@@ -94,4 +97,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}
