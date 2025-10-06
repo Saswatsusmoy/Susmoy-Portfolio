@@ -60,7 +60,22 @@ export const data: SiteData = {
     x: "https://x.com/SusmoySaswat",
     email: "mailto:saswatsusmoy9@gmail.com",
   },
- 
+  hero: {
+    greeting: "Hello, I'm",
+    role: "GenAI/NLP Engineer",
+    typewriter_topics: [
+      "Multi-Agent Systems",
+      "LLM Benchmarking", 
+      "Text-to-SQL Pipelines",
+      "RAG Systems",
+      "AI Fact-Checking"
+    ],
+    code_snippets_cycle: [
+      "def create_agent():\n  return Agent(\n    name='AI Engineer',\n    tools=['LangChain', 'Transformers']\n  )",
+      "class LLMBenchmark:\n  def __init__(self):\n    self.models = ['GPT-4', 'Claude-3']\n    self.metrics = ['accuracy', 'latency']",
+      "def text_to_sql(query):\n  sql = llm.generate(\n    prompt=f'Convert: {query}'\n  )\n  return validate_sql(sql)"
+    ]
+  },
   about: {
     tagline: "Defining intelligence through code",
     stats: [

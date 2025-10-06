@@ -1,5 +1,5 @@
 import SectionHeader from "@/components/SectionHeader";
-import { data } from "@/data/site";
+import Link from "next/link";
 
 export default function BlogsPage() {
   return (
@@ -9,9 +9,9 @@ export default function BlogsPage() {
         Writing coming soon. For now, explore projects or resume.
       </p>
       <div className="flex items-center gap-3 text-[12px] text-[color:var(--muted)]">
-        <a href="/projects" className="hover:text-[color:var(--foreground)] transition-colors">projects</a>
+        <Link href="/projects" className="hover:text-[color:var(--foreground)] transition-colors">projects</Link>
         <span className="text-[color:var(--muted)]/50">/</span>
-        <a href="/resume" className="hover:text-[color:var(--foreground)] transition-colors">resume</a>
+        <Link href="/resume" className="hover:text-[color:var(--foreground)] transition-colors">resume</Link>
       </div>
     </div>
   );

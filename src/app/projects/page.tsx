@@ -2,6 +2,7 @@
 import SectionHeader from "@/components/SectionHeader";
 import ProjectCard from "@/components/ProjectCard";
 import Badge from "@/components/Badge";
+import Link from "next/link";
 import { data } from "@/data/site";
 import { useMemo, useState } from "react";
 
@@ -43,8 +44,8 @@ export default function ProjectsPage() {
 
       <div className="pt-4">
         <div className="flex items-center gap-2 flex-wrap">
-          <Badge>total: {data.projects.all_projects.length}</Badge>
-          <a href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">← back home</a>
+          <Badge>{`total: ${data.projects.all_projects.length}`}</Badge>
+          <Link href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">← back home</Link>
         </div>
       </div>
     </div>

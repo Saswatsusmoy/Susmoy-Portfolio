@@ -1,5 +1,6 @@
 import SectionHeader from "@/components/SectionHeader";
 import Badge from "@/components/Badge";
+import Link from "next/link";
 import { data } from "@/data/site";
 
 export default function ResumePage() {
@@ -57,7 +58,7 @@ export default function ResumePage() {
       </section>
 
       <div className="pt-2">
-        <a href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">← back home</a>
+        <Link href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">← back home</Link>
       </div>
     </div>
   );
