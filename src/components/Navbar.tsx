@@ -10,9 +10,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 backdrop-blur-sm bg-[color:var(--panel)]/70 border-b border-[color:var(--border)]">
       <div className="mx-auto w-full max-w-screen-lg px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
       <div className="flex items-center gap-3">
-          <div className="size-1.5 rounded-full bg-[color:var(--accent)] shadow-[0_0_10px_rgba(233,84,32,0.6)]" />
-          <span className="font-mono text-xs text-[color:var(--muted)]">$</span>
-          <span className="font-mono text-xs text-[color:var(--foreground)]">{data.person.alias?.toLowerCase() || data.person.name.toLowerCase()}</span>
+          <Link href="/" className="flex items-center gap-2 hover:bg-[color:var(--panel)]/50 rounded-md px-2 py-1 transition-colors duration-200 group">
+            <div className="size-1.5 rounded-full bg-[color:var(--accent)] shadow-[0_0_10px_rgba(233,84,32,0.6)]" />
+            <span className="font-mono text-xs text-[color:var(--muted)]">$</span>
+            <span className="font-mono text-xs text-[color:var(--foreground)] group-hover:text-[color:var(--accent)] transition-colors duration-200">{data.person.alias?.toLowerCase() || data.person.name.toLowerCase()}</span>
+          </Link>
       </div>
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-4 text-xs text-[color:var(--muted)]">
