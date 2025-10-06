@@ -1,32 +1,90 @@
-import Navigation from '@/components/Navigation'
-import HeroSection from '@/components/sections/HeroSection'
-import AboutSection from '@/components/sections/AboutSection'
-import SkillsSection from '@/components/sections/SkillsSection'
-import ProjectsSection from '@/components/sections/ProjectsSection'
-import ContactSection from '@/components/sections/ContactSection'
-import ScrollToTop from '@/components/ScrollToTop'
+import TerminalHero from "@/components/TerminalHero";
+import SectionHeader from "@/components/SectionHeader";
+import ProjectCard from "@/components/ProjectCard";
+import Badge from "@/components/Badge";
+import Link from "next/link";
+import { data } from "@/data/site";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-background-primary">
-      <Navigation />
-      
-      {/* Subtle Background Pattern */}
-      <div className="fixed inset-0 opacity-5 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/8 via-transparent to-accent-secondary/8" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,140,0,0.08),transparent_50%)]" />
-      </div>
+    <div className="space-y-8">
+      <TerminalHero />
 
-      {/* Main Content */}
-      <div className="relative z-10 w-full max-w-screen-2xl mx-auto">
-        <HeroSection />
-        <ProjectsSection />
-        <AboutSection />
-        <SkillsSection />
-      </div>
+      <section id="highlights" className="space-y-1">
+        <SectionHeader title="Highlights" subtitle={data.about.tagline} />
+        <div className="flex flex-wrap gap-1">
+          {data.about.stats.slice(0, 3).map((s) => (
+            <Badge key={s.label}>{`${s.number} ${s.label}`}</Badge>
+          ))}
+        </div>
+      </section>
 
-      {/* Floating Elements */}
-      <ScrollToTop />
-    </main>
-  )
-} 
+      <section id="projects" className="space-y-2">
+        <SectionHeader title="Featured Projects" subtitle="curated selection" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {[
+            data.projects.categories.GenAI[0], // AarogyaAI
+            data.projects.categories.GenAI[3], // Text-to-SQL Pipeline
+            data.projects.categories.GenAI[1], // LLM Benchmarking Suite
+          ].map((p) => (
+            <ProjectCard key={p.title} project={{ title: p.title, description: p.description, tags: p.tags, href: p.github || p.demo }} />
+          ))}
+        </div>
+        <div className="pt-2">
+          <Link href="/projects" className="text-[12px] text-[color:var(--muted)] hover:text-[color:var(--foreground)]">view all projects →</Link>
+        </div>
+      </section>
+
+
+      <section id="experience" className="space-y-2">
+        <SectionHeader title="Experience" subtitle="recent roles" />
+        {(() => {
+          const monthIndex: Record<string, number> = {
+            jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5,
+            jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11,
+          };
+          const parseEndDate = (duration: string): number => {
+            const parts = duration.split("-");
+            const end = (parts[1] || parts[0]).trim();
+            // e.g. "Jun 2024" or "Dec 2024" or "Present"
+            if (/present/i.test(end)) return Date.now();
+            const m = end.split(/\s+/)[0]?.slice(0,3).toLowerCase();
+            const y = parseInt((end.match(/\d{4}/)?.[0] || "0"), 10);
+            if (Number.isFinite(y) && m in monthIndex) {
+              return new Date(y, monthIndex[m as keyof typeof monthIndex], 1).getTime();
+            }
+            return 0;
+          };
+          const sorted = [...data.resume.experience].sort((a, b) => parseEndDate(b.duration) - parseEndDate(a.duration));
+          const top = sorted.slice(0, 3);
+          return (
+            <ul className="space-y-1 text-[12px] text-[color:var(--foreground)]">
+              {top.map((e) => (
+                <li key={e.company}>
+                  {e.role} <span className="text-[color:var(--muted)]">@ {e.company}</span> — <span className="text-[color:var(--muted)]/70">{e.duration}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        })()}
+        <div className="pt-2">
+          <Link href="/resume" className="text-[12px] text-[color:var(--muted)] hover:text-[color:var(--foreground)]">view full resume →</Link>
+        </div>
+      </section>
+
+      <section id="contact" className="space-y-2">
+        <SectionHeader title="Contact" subtitle={data.contact_section.blurb} />
+        <div className="flex items-center gap-3 text-[12px] text-[color:var(--muted)] flex-wrap">
+          {data.contact_section.socials.map((s, i) => (
+            <div key={s.name} className="flex items-center gap-3">
+              <a href={s.url} target="_blank" rel="noreferrer" className="hover:text-[color:var(--foreground)]">{s.name.toLowerCase()}</a>
+              {i < data.contact_section.socials.length - 1 ? (
+                <span className="text-[color:var(--muted)]/50">/</span>
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
