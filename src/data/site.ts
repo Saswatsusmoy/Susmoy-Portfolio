@@ -43,7 +43,7 @@ export type SiteData = {
 
 export const data: SiteData = {
   site: {
-    title: "$ saswatsusmoy",
+    title: "saswatsusmoy",
     description:
       "Portfolio of Saswat Susmoy Sahoo - GenAI/NLP Engineer specializing in multi-agent systems, LLM benchmarking, and Text-to-SQL pipelines.",
     domain: "https://saswat.dev",
