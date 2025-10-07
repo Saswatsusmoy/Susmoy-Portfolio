@@ -21,7 +21,7 @@ export default function Home() {
 
       <section id="projects" className="space-y-2">
         <SectionHeader title="Featured Projects" subtitle="curated selection" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
           {[
             data.projects.categories.GenAI[0], // AarogyaAI
             data.projects.categories.GenAI[5], // TalkDocs2
