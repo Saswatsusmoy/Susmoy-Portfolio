@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="flex items-center justify-center text-[11px] text-[color:var(--muted)]">
           <button
             onClick={scrollToTop}
-            className="hover:text-[color:var(--foreground)] transition-colors duration-200 cursor-pointer font-mono"
+            className="hover:text-[color:var(--foreground)] transition-colors duration-200 cursor-pointer font-mono min-h-[44px] px-3 py-2"
             aria-label="Scroll to top"
           >
             saswatsusmoy

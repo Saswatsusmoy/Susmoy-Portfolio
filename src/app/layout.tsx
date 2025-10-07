@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   title: data.site.title,
   description: data.site.description,
   metadataBase: new URL(data.site.domain),
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -35,6 +41,11 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: data.site.title,
+  },
   openGraph: {
     title: data.site.title,
     description: data.site.description,

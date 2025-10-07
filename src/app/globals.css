@@ -76,11 +76,47 @@ body {
   }
 }
 
-/* Touch-friendly interactions */
+/* Touch-friendly interactions for iPadOS and mobile */
 @media (hover: none) and (pointer: coarse) {
   button, a {
     min-height: 44px;
     min-width: 44px;
+  }
+}
+
+/* iPadOS specific improvements */
+@media (min-width: 768px) and (max-width: 1279px) {
+  /* Tablet-specific adjustments */
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Ensure touch targets are large enough */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Safari-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific styles */
+  body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Fix for Safari backdrop-filter issues */
+  .backdrop-blur-md {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+  
+  /* Fix for Safari transform issues */
+  .hover-lift {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 

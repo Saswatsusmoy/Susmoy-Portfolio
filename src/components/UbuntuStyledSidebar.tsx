@@ -60,7 +60,7 @@ export default function UbuntuStyledSidebar() {
   ].filter((link): link is typeof link & { href: string } => !!link.href);
 
   return (
-    <div className="hidden md:block fixed left-2 bottom-4 z-40 lg:left-0">
+    <div className="hidden xl:block fixed left-2 bottom-4 z-40">
       <div className={`
         bg-background/80 border-r border-border/50 backdrop-blur-md
         w-12 rounded-r-lg shadow-2xl

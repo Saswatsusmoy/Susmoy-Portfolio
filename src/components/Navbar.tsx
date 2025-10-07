@@ -51,7 +51,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <nav className="flex items-center gap-4 text-xs text-[color:var(--muted)]">
               {navigationLinks.map((link) => (
                 <Link
@@ -66,12 +66,12 @@ export default function Navbar() {
             <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center gap-2">
+          {/* Mobile/Tablet menu button */}
+          <div className="lg:hidden flex items-center gap-2">
             <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-md hover:bg-[color:var(--panel)]/50 transition-colors duration-200"
+              className="p-3 rounded-md hover:bg-[color:var(--panel)]/50 transition-colors duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
               <HamburgerIcon isOpen={isMenuOpen} />
@@ -79,16 +79,16 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile/Tablet menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-[color:var(--border)] py-3 animate-in slide-in-from-top-2 fade-in duration-200">
+          <div className="lg:hidden border-t border-[color:var(--border)] py-3 animate-in slide-in-from-top-2 fade-in duration-200">
             <nav className="flex flex-col space-y-2 text-xs text-[color:var(--muted)]">
               {navigationLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-2 py-2 rounded-md transition-colors duration-200 ${
+                  className={`px-3 py-3 rounded-md transition-colors duration-200 min-h-[44px] flex items-center ${
                     pathname === link.href
                       ? "text-[color:var(--foreground)] bg-[color:var(--panel)]/30"
                       : "hover:text-[color:var(--foreground)] hover:bg-[color:var(--panel)]/20"
