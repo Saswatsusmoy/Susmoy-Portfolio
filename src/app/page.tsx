@@ -24,7 +24,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {[
             data.projects.categories.GenAI[0], // AarogyaAI
-            data.projects.categories.GenAI[3], // Text-to-SQL Pipeline
+            data.projects.categories.GenAI[5], // TalkDocs2
             data.projects.categories.GenAI[1], // LLM Benchmarking Suite
           ].map((p) => (
             <ProjectCard key={p.title} project={{ title: p.title, description: p.description, tags: p.tags, href: p.github || p.demo }} />

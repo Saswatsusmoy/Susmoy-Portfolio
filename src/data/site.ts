@@ -50,7 +50,7 @@ export const data: SiteData = {
   },
   person: {
     name: "Saswat Susmoy Sahoo",
-    alias: "Saswat",
+    alias: "saswatsusmoy",
     headline: "GenAI/NLP Engineer",
     location: "India",
   },
@@ -192,29 +192,6 @@ export const data: SiteData = {
           demo: "#",
         },
       ],
-      "Web-Dev": [
-        {
-          title: "FinanceScope - Finance Research Agent",
-          description: "Finance research platform with agents, live data APIs, and automated reporting.",
-          tags: ["Finance", "Agents", "LLMs", "Web Platform"],
-          github: "https://github.com/Saswatsusmoy",
-          demo: "#",
-        },
-        {
-          title: "Portfolio Manager",
-          description: "Investment tracking, performance visualization, multi-account management.",
-          tags: ["Finance", "Dashboard", "React"],
-          github: "https://github.com/Saswatsusmoy",
-          demo: "#",
-        },
-        {
-          title: "Voice-Based Banking POC",
-          description: "Interactive voice banking system with natural language processing for secure financial transactions.",
-          tags: ["Voice Banking", "NLP", "Fintech", "Voice Interface"],
-          github: "https://github.com/Saswatsusmoy/Voice-Based-Banking-POC",
-          demo: "#",
-        },
-      ],
       "Machine Learning": [
         {
           title: "Credit Card Fraud Detection",
@@ -242,6 +219,29 @@ export const data: SiteData = {
           description: "Advanced character recognition system supporting multiple languages with high accuracy OCR capabilities.",
           tags: ["OCR", "Multi-Language", "Computer Vision", "Character Recognition"],
           github: "https://github.com/Saswatsusmoy/Multi-Lang-Character-Recognition-CIC",
+          demo: "#",
+        },
+      ],
+      "Web-Dev": [
+        {
+          title: "FinanceScope - Finance Research Agent",
+          description: "Finance research platform with agents, live data APIs, and automated reporting.",
+          tags: ["Finance", "Agents", "LLMs", "Web Platform"],
+          github: "https://github.com/Saswatsusmoy",
+          demo: "#",
+        },
+        {
+          title: "Portfolio Manager",
+          description: "Investment tracking, performance visualization, multi-account management.",
+          tags: ["Finance", "Dashboard", "React"],
+          github: "https://github.com/Saswatsusmoy",
+          demo: "#",
+        },
+        {
+          title: "Voice-Based Banking POC",
+          description: "Interactive voice banking system with natural language processing for secure financial transactions.",
+          tags: ["Voice Banking", "NLP", "Fintech", "Voice Interface"],
+          github: "https://github.com/Saswatsusmoy/Voice-Based-Banking-POC",
           demo: "#",
         },
       ],

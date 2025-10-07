@@ -1,0 +1,22 @@
+n{
+  "name": "$ saswatsusmoy",
+  "short_name": "saswatsusmoy",
+  "description": "Portfolio of Saswat Susmoy Sahoo - GenAI/NLP Engineer specializing in multi-agent systems, LLM benchmarking, and Text-to-SQL pipelines.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#e95420",
+  "background_color": "#111216",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
