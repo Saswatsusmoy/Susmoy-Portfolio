@@ -97,7 +97,7 @@ export const data: SiteData = {
       {
         company: "Protean eGov Technologies Ltd",
         role: "Code for GovTech Mentee",
-        duration: "May 2025 - Jun 2025",
+        duration: "May 2025 - Aug 2025",
         achievements: [
           "Implemented a multi-agent RAG chatbot using LangChain retrieving data from SQL.",
           "Built a Text-to-SQL pipeline for natural language querying.",
