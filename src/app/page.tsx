@@ -71,20 +71,6 @@ export default function Home() {
           <Link href="/resume" className="text-[12px] text-[color:var(--muted)] hover:text-[color:var(--foreground)]">view full resume →</Link>
         </div>
       </section>
-
-      <section id="contact" className="space-y-2">
-        <SectionHeader title="Contact" subtitle={data.contact_section.blurb} />
-        <div className="flex items-center gap-3 text-[12px] text-[color:var(--muted)] flex-wrap">
-          {data.contact_section.socials.map((s, i) => (
-            <div key={s.name} className="flex items-center gap-3">
-              <a href={s.url} target="_blank" rel="noreferrer" className="hover:text-[color:var(--foreground)]">{s.name.toLowerCase()}</a>
-              {i < data.contact_section.socials.length - 1 ? (
-                <span className="text-[color:var(--muted)]/50">/</span>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
