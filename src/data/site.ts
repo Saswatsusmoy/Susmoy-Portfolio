@@ -46,7 +46,7 @@ export const data: SiteData = {
     title: "saswatsusmoy",
     description:
       "Portfolio of Saswat Susmoy Sahoo - GenAI/NLP Engineer specializing in multi-agent systems, LLM benchmarking, and Text-to-SQL pipelines.",
-    domain: "https://saswat.dev",
+    domain: "https://www.saswat.in",
   },
   person: {
     name: "Saswat Susmoy Sahoo",
