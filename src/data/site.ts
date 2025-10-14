@@ -104,7 +104,7 @@ export const data: SiteData = {
   resume: {
     education: [
       {
-        degree: "B.Tech, IT & Mathematical Innovations",
+        degree: "Bachelor of Technology, IT & Mathematics",
         institution: "University of Delhi",
         years: "2022 - 2026",
         coursework: [
@@ -204,6 +204,16 @@ export const data: SiteData = {
           "Designed a multi-agent system with LangChain/LangGraph; identified 200+ keywords; reduced latency by 10%.",
           "Developed a real-time feedback system using GPT-4 with <1s response.",
           "Achieved 99.9% system uptime; reduced manual QA by 85%; improved agent performance by 86%.",
+        ],
+      },
+      {
+        company: "Hashed Tokens",
+        role: "AI Research Intern",
+        duration: "Dec 2023 - Feb 2024",
+        achievements: [
+          "Conducted research on machine learning algorithms and model optimization techniques.",
+          "Analyzed data patterns and developed predictive models for various datasets.",
+          "Contributed to research reports on ML model performance and evaluation metrics.",
         ],
       },
     ],
