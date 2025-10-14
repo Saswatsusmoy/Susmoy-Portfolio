@@ -23,24 +23,14 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 flex-shrink-0">
-                  {p.github && (
+                  {p.link && p.link !== "#" && (
                     <a
-                      href={p.github}
+                      href={p.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
                     >
-                      [github]
-                    </a>
-                  )}
-                  {p.demo && p.demo !== "#" && (
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
-                    >
-                      [demo]
+                      [link]
                     </a>
                   )}
                 </div>
