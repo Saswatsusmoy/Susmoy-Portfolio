@@ -187,12 +187,13 @@ export const data: SiteData = {
     experience: [
       {
         company: "Protean eGov Technologies Ltd",
-        role: "Code for GovTech Mentee",
+        role: "Code for GovTech Intern",
         duration: "May 2025 - Aug 2025",
         achievements: [
-          "Implemented a multi-agent RAG chatbot using LangChain retrieving data from SQL.",
-          "Built a Text-to-SQL pipeline for natural language querying.",
+          "Implemented a multi-agent RAG chatbot using LangChain.",
+          "Built an end-to-end Text-to-SQL pipeline for natural language querying.",
           "Developed a dynamic dashboard for chatbot interaction and visualization.",
+          "Built MCP servers for advanced LLM tool calling."
         ],
       },
       {

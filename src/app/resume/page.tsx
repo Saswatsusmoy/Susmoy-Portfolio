@@ -35,21 +35,6 @@ export default function ResumePage() {
         <CollapsibleEducation education={data.resume.education} />
       </section>
 
-      <section className="space-y-3">
-        <h3 className="text-sm text-[color:var(--foreground)] font-medium">Skills</h3>
-        <div className="grid sm:grid-cols-2 gap-3">
-          {data.skills.tech_stack_categories.map((cat) => (
-            <div key={cat.title} className="rounded-md border border-[color:var(--border)] p-4 bg-[color:var(--card)] hover:bg-[color:var(--card-hover)] transition-colors">
-              <p className="text-[color:var(--foreground)] text-sm font-medium">{cat.title}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {cat.techs.map((t) => (
-                  <Badge key={t}>{t}</Badge>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <div className="pt-2">
         <Link href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">← back home</Link>
