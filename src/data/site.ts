@@ -450,7 +450,7 @@ export const data: SiteData = {
     socials: [
       { name: "GitHub", url: "https://github.com/Saswatsusmoy" },
       { name: "LinkedIn", url: "https://www.linkedin.com/in/saswat-susmoy-sahoo/" },
-      { name: "Email", url: "mailto:saswatsusmoy9@gmail.com" },
+      { name: "Email", url: "mailto:tech@saswatsusmoy.in" },
       { name: "X", url: "https://x.com/SusmoySaswat" },
     ],
   },
