@@ -1,7 +1,5 @@
 "use client";
 import SectionHeader from "@/components/SectionHeader";
-import ProjectCard from "@/components/ProjectCard";
-import Badge from "@/components/Badge";
 import Link from "next/link";
 import { data } from "@/data/site";
 import { useMemo, useState } from "react";
@@ -24,12 +22,11 @@ export default function ProjectsPage() {
           <button
             key={c}
             onClick={() => setActive(c)}
-            className={`rounded-md border px-3 py-1 text-sm transition-all duration-200 ${
+            className={`text-sm transition-colors border-b border-[color:var(--border)] pb-1 ${
               active === c
-                ? "border-[color:var(--accent)] bg-[color:var(--accent)]/10 text-[color:var(--accent)] shadow-sm"
-                : "border-[color:var(--border)] bg-[color:var(--panel)] text-[color:var(--foreground)] hover:border-[color:var(--border-hover)] hover:bg-[color:var(--panel-hover)]"
+                ? "text-[color:var(--foreground)] border-[color:var(--foreground)]"
+                : "text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
             }`}
-            aria-pressed={active === c}
           >
             {c}
           </button>
@@ -38,14 +35,45 @@ export default function ProjectsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {visibleProjects.map((p) => (
-          <ProjectCard key={p.title} project={{ title: p.title, description: p.description, tags: p.tags, href: p.github || p.demo }} />
+          <div key={p.title} className="border border-[color:var(--border)] p-4 hover:bg-[color:var(--panel)]/30 transition-colors">
+            <div className="space-y-2">
+              <h3 className="text-sm font-medium text-[color:var(--foreground)]">
+                {p.title}
+              </h3>
+              <p className="text-xs text-[color:var(--muted)] line-clamp-3">
+                {p.description}
+              </p>
+              <div className="flex items-center gap-2 pt-2">
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors"
+                  >
+                    [github]
+                  </a>
+                )}
+                {p.demo && p.demo !== "#" && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors"
+                  >
+                    [demo]
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
 
       <div className="pt-4">
         <div className="flex items-center gap-2 flex-wrap">
-          <Badge>{`total: ${data.projects.all_projects.length}`}</Badge>
-          <Link href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">← back home</Link>
+          <span className="text-sm text-[color:var(--muted)]">total: {data.projects.all_projects.length}</span>
+          <Link href="/" className="text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors">[← back home]</Link>
         </div>
       </div>
     </div>

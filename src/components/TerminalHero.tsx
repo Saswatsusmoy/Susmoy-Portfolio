@@ -4,14 +4,6 @@ import { data } from "@/data/site";
 export default function TerminalHero() {
   return (
     <section className="rounded-md border border-[color:var(--border)] bg-[color:var(--panel)] shadow-sm">
-      <div className="flex items-center justify-between px-3 py-2 border-b border-[color:var(--border)]">
-        <div className="flex items-center gap-2">
-          <span className="size-1.5 rounded-full bg-red-500" />
-          <span className="size-1.5 rounded-full bg-yellow-500" />
-          <span className="size-1.5 rounded-full bg-green-500" />
-        </div>
-        <p className="font-mono text-[10px] text-[color:var(--muted)]">bash — portfolio.sh</p>
-      </div>
       <div className="p-4 sm:p-6 lg:p-8 font-mono text-[12px] leading-relaxed">
         <TerminalLine prompt>whoami</TerminalLine>
         <TerminalLine>{data.person.name}</TerminalLine>
