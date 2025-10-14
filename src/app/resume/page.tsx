@@ -1,5 +1,6 @@
 import SectionHeader from "@/components/SectionHeader";
 import Badge from "@/components/Badge";
+import CollapsibleEducation from "@/components/CollapsibleEducation";
 import Link from "next/link";
 import { data } from "@/data/site";
 
@@ -31,14 +32,7 @@ export default function ResumePage() {
 
       <section className="space-y-3">
         <h3 className="text-sm text-[color:var(--foreground)] font-medium">Education</h3>
-        <ul className="space-y-3">
-          {data.resume.education.map((ed) => (
-            <li key={ed.institution} className="rounded-md border border-[color:var(--border)] p-4 bg-[color:var(--card)] hover:bg-[color:var(--card-hover)] transition-colors">
-              <p className="text-[color:var(--foreground)] text-sm font-medium">{ed.degree}</p>
-              <p className="text-xs text-[color:var(--muted)]">{ed.institution} · {ed.years}</p>
-            </li>
-          ))}
-        </ul>
+        <CollapsibleEducation education={data.resume.education} />
       </section>
 
       <section className="space-y-3">

@@ -25,7 +25,12 @@ export type SiteData = {
     stats: { number: string; label: string }[];
   };
   resume: {
-    education: { degree: string; institution: string; years: string }[];
+    education: { 
+      degree: string; 
+      institution: string; 
+      years: string; 
+      coursework?: { semester: string; courses: string[] }[];
+    }[];
     experience: { company: string; role: string; duration: string; achievements: string[] }[];
   };
   skills: {
@@ -91,6 +96,81 @@ export const data: SiteData = {
         degree: "B.Tech, IT & Mathematical Innovations",
         institution: "University of Delhi",
         years: "2022 - 2026",
+        coursework: [
+          {
+            semester: "Semester 1 (2022)",
+            courses: [
+              "Programming Fundamentals",
+              "Single & Multivariable Calculus",
+              "Discrete Mathematics & Application",
+              "Engineering Physics - I",
+              "Environmental Science: Theory into practice - I",
+              "Science and Society",
+              "Creative Writing"
+            ]
+          },
+          {
+            semester: "Semester 2 (2023)",
+            courses: [
+              "Data Structures and Design",
+              "Object-Oriented Programming",
+              "Linear Algebra",
+              "Engineering Physics - II",
+              "Innovation & Entrepreneurship",
+              "Vedic Mathematics - I",
+            ]
+          },
+          {
+            semester: "Semester 3 (2023)",
+            courses: [
+              "Operating Systems",
+              "Computer Systems Architecture",
+              "Ordinary Differential Equations",
+              "Flow of Information in Living Systems",
+              "Environmental Science: Theory into practice - II",
+              "Ayurveda & Nutrition"
+            ]
+          },
+          {
+            semester: "Semester 4 (2023)",
+            courses: [
+              "Analyis and Design of Algorithms",
+              "Database Management Systems",
+              "Probability and Statistics",
+              "In-Silico Biology",
+              "Vedic Mathematics - II",
+            ]
+          },
+          {
+            semester: "Semester 5 (2024)",
+            courses: [
+              "Data Communication & Networking",
+              "Software Engineering",
+              "IOT, Security & Machine Learning",
+              "Linear Programming & Game Theory",
+              "Circuit Analysis & Synthesis"
+            ]
+          },
+          {
+            semester: "Semester 6 (2024)",
+            courses: [
+              "Information Security",
+              "Artificial Intelligence",
+              "Numerical Methods for Computational Mathematics",
+              "Technological Solutions for Society",
+              "Control Systems",
+            ]
+          },
+          {
+            semester: "Semester 7 (2025)",
+            courses: [
+              "Data Mining & Warehousing",
+              "Deep Learning & Applications",
+              "Biological Networks & Data Analysis",
+              "Nanotechnology"
+            ]
+          }
+        ]
       },
     ],
     experience: [
