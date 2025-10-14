@@ -15,8 +15,10 @@ export default function TerminalHero() {
       <div className="p-4 sm:p-6 lg:p-8 font-mono text-[12px] leading-relaxed">
         <TerminalLine prompt>whoami</TerminalLine>
         <TerminalLine>{data.person.name}</TerminalLine>
-        <TerminalLine prompt>focus</TerminalLine>
-        <TerminalLine>genai · agentic workflows · rag · evals</TerminalLine>
+        <TerminalLine prompt>ls ~/skills/</TerminalLine>
+        <TerminalLine>debugging  googling  copy-paste  prayer  problem-solving</TerminalLine>
+        <TerminalLine prompt>cat /proc/motivation</TerminalLine>
+        <TerminalLine>It compiles, ship it!</TerminalLine>
       </div>
     </section>
   );

@@ -1,5 +1,3 @@
-import Badge from "@/components/Badge";
-
 export type Project = {
   title: string;
   description: string;
@@ -20,11 +18,6 @@ export default function ProjectCard({ project }: { project: Project }) {
         <span className="text-[10px] text-[color:var(--muted)] group-hover:text-[color:var(--foreground)] transition-colors">↗</span>
       </div>
       <p className="mt-1.5 text-[12px] text-[color:var(--muted)]">{project.description}</p>
-      <div className="mt-2.5 flex flex-wrap gap-1.5">
-        {project.tags.map((t) => (
-          <Badge key={t}>{t}</Badge>
-        ))}
-      </div>
     </a>
   );
 }

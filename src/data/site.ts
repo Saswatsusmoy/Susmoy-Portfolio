@@ -44,19 +44,30 @@ export type SiteData = {
     blurb: string;
     socials: { name: string; url: string }[];
   };
+  blogs: {
+    posts: {
+      id: string;
+      title: string;
+      excerpt: string;
+      date: string;
+      readTime: string;
+      tags: string[];
+      slug: string;
+    }[];
+  };
 };
 
 export const data: SiteData = {
   site: {
     title: "saswatsusmoy",
     description:
-      "Portfolio of Saswat Susmoy Sahoo - GenAI/NLP Engineer specializing in multi-agent systems, LLM benchmarking, and Text-to-SQL pipelines.",
+      "Portfolio of Saswat Susmoy Sahoo - Full-stack developer who speaks fluent binary and occasionally dreams in code. Specializing in turning coffee into functional applications.",
     domain: "https://www.saswat.in",
   },
   person: {
     name: "Saswat Susmoy Sahoo",
     alias: "saswatsusmoy",
-    headline: "GenAI/NLP Engineer",
+    headline: "Code Wizard & Digital Alchemist",
     location: "India",
   },
   socials: {
@@ -66,28 +77,28 @@ export const data: SiteData = {
     email: "mailto:saswatsusmoy9@gmail.com",
   },
   hero: {
-    greeting: "Hello, I'm",
-    role: "GenAI/NLP Engineer",
+    greeting: "Hello World, I'm",
+    role: "Code Wizard & Digital Alchemist",
     typewriter_topics: [
-      "Multi-Agent Systems",
-      "LLM Benchmarking", 
-      "Text-to-SQL Pipelines",
-      "RAG Systems",
-      "AI Fact-Checking"
+      "Coffee-to-Code Converter",
+      "Bug Hunter Extraordinaire", 
+      "Stack Overflow Survivor",
+      "Compiler Whisperer",
+      "Digital Problem Solver"
     ],
     code_snippets_cycle: [
-      "def create_agent():\n  return Agent(\n    name='AI Engineer',\n    tools=['LangChain', 'Transformers']\n  )",
-      "class LLMBenchmark:\n  def __init__(self):\n    self.models = ['GPT-4', 'Claude-3']\n    self.metrics = ['accuracy', 'latency']",
-      "def text_to_sql(query):\n  sql = llm.generate(\n    prompt=f'Convert: {query}'\n  )\n  return validate_sql(sql)"
+      "while (coffee > 0) {\n  code += '// TODO: Fix this later';\n  coffee--;\n}",
+      "if (bug.found) {\n  console.log('It works on my machine!');\n  return 'Ship it anyway';\n}",
+      "const developer = {\n  skills: ['Googling', 'Copy-paste', 'Prayer'],\n  motto: 'It compiles, ship it!'\n};"
     ]
   },
   about: {
-    tagline: "Defining intelligence through code",
+    tagline: "Turning caffeine into code since 2022",
     stats: [
-      { number: "25+", label: "AI Projects Built" },
-      { number: "15+", label: "Models Deployed" },
-      { number: "99%", label: "System Uptime" },
-      { number: "500M+", label: "Tokens Processed" },
+      { number: "∞", label: "Cups of Coffee Consumed" },
+      { number: "42", label: "Meaning of Life (in binary)" },
+      { number: "99%", label: "Time Spent Debugging" },
+      { number: "1", label: "Working Computer (barely)" },
     ],
   },
   resume: {
@@ -434,13 +445,26 @@ export const data: SiteData = {
     ],
   },
   contact_section: {
-    blurb: "Interested in collaborating, hiring, or just want to talk GenAI?",
+    blurb: "Want to collaborate, hire a code wizard, or just discuss the latest Reddit Tech News?",
     socials: [
       { name: "GitHub", url: "https://github.com/Saswatsusmoy" },
       { name: "LinkedIn", url: "https://www.linkedin.com/in/saswat-susmoy-sahoo/" },
       { name: "Email", url: "mailto:saswatsusmoy9@gmail.com" },
       { name: "X", url: "https://x.com/SusmoySaswat" },
     ],
+  },
+  blogs: {
+    posts: [
+      {
+        id: "ai-coding",
+        title: "I never knew the life of pre-AI stack-overflow developers (And Why I'm Mad About It)",
+        excerpt: "I hear tales of the old days when geeks spent their billable hours rambling through those classic HTML aesthetic dev-forums, stack-overflow and what-not to get their idea into a working code. But unfortunately I started...",
+        date: "August 2025",
+        readTime: "5 min read",
+        tags: ["Development"],
+        slug: "ai-coding"
+      }
+    ]
   },
 };
 

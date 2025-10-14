@@ -10,15 +10,6 @@ export default function Home() {
     <div className="space-y-8">
       <TerminalHero />
 
-      <section id="highlights" className="space-y-1">
-        <SectionHeader title="Highlights" subtitle={data.about.tagline} />
-        <div className="flex flex-wrap gap-1">
-          {data.about.stats.slice(0, 3).map((s) => (
-            <Badge key={s.label}>{`${s.number} ${s.label}`}</Badge>
-          ))}
-        </div>
-      </section>
-
       <section id="projects" className="space-y-2">
         <SectionHeader title="Featured Projects" subtitle="curated selection" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3">
