@@ -116,19 +116,20 @@ const contentMap = {
 };
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = data.blogs.posts.find(p => p.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = data.blogs.posts.find(p => p.slug === slug);
   
   if (!post) {
     notFound();
   }
 
-  const ContentComponent = contentMap[params.slug as keyof typeof contentMap];
+  const ContentComponent = contentMap[slug as keyof typeof contentMap];
 
   return (
     <div className="space-y-8">
@@ -181,7 +182,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 }
 
 // Generate static params for all blog posts
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return data.blogs.posts.map((post) => ({
     slug: post.slug,
   }));
