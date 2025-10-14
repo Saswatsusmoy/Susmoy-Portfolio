@@ -74,7 +74,7 @@ export const data: SiteData = {
     github: "https://github.com/Saswatsusmoy",
     linkedin: "https://www.linkedin.com/in/saswat-susmoy-sahoo/",
     x: "https://x.com/SusmoySaswat",
-    email: "mailto:saswatsusmoy9@gmail.com",
+    email: "mailto:tech@saswatsusmoy.in",
   },
   hero: {
     greeting: "Hello World, I'm",
