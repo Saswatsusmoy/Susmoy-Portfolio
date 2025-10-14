@@ -27,11 +27,6 @@ export default function BlogsPage() {
         ))}
       </div>
 
-      <div className="flex items-center gap-3 text-[12px] text-[color:var(--muted)] pt-4 border-t border-[color:var(--border)]">
-        <Link href="/projects" className="hover:text-[color:var(--foreground)] transition-colors">projects</Link>
-        <span className="text-[color:var(--muted)]/50">/</span>
-        <Link href="/resume" className="hover:text-[color:var(--foreground)] transition-colors">resume</Link>
-      </div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-3">
           {[
             data.projects.categories.GenAI[0], // AarogyaAI
-            data.projects.categories.GenAI[5], // TalkDocs2
+            data.projects.categories.GenAI[4], // TalkDocs2
             data.projects.categories.GenAI[1], // LLM Benchmarking Suite
           ].map((p) => (
             <ProjectCard key={p.title} project={{ title: p.title, description: p.description, tags: p.tags, href: p.github || p.demo }} />
@@ -57,9 +57,6 @@ export default function Home() {
             </ul>
           );
         })()}
-        <div className="pt-2">
-          <Link href="/resume" className="text-[12px] text-[color:var(--muted)] hover:text-[color:var(--foreground)]">view full resume →</Link>
-        </div>
       </section>
     </div>
   );

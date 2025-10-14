@@ -202,7 +202,6 @@ export const data: SiteData = {
         duration: "May 2025 - Aug 2025",
         achievements: [
           "Implemented a multi-agent RAG chatbot using LangChain.",
-          "Built an end-to-end Text-to-SQL pipeline for natural language querying.",
           "Developed a dynamic dashboard for chatbot interaction and visualization.",
           "Built MCP servers for advanced LLM tool calling."
         ],
@@ -269,14 +268,6 @@ export const data: SiteData = {
             "Multi-lingual search engine with edge inferencing; sub-100ms; speech recognition; top 5 nationwide.",
           tags: ["Semantic Search", "NLP", "Multilingual", "Edge Computing"],
           github: "https://github.com/Saswatsusmoy",
-          demo: "#",
-        },
-        {
-          title: "Text-to-SQL Pipeline with Multi-Agent Validation",
-          description:
-            "Enterprise natural language to SQL with multi-agent validation and compliance checking.",
-          tags: ["Text-to-SQL", "Multi-Agent", "Query Optimization", "Enterprise"],
-          github: "#",
           demo: "#",
         },
         {
@@ -373,14 +364,6 @@ export const data: SiteData = {
         status: "Completed",
         timeline: "Q4 2024",
         link: "https://github.com/Saswatsusmoy/AarogyaAI",
-      },
-      {
-        title: "Text-to-SQL Pipeline with Multi-Agent Validation",
-        description:
-          "Enterprise-grade natural language to SQL system with a multi-agent validation framework.",
-        status: "Completed",
-        timeline: "Q4 2023",
-        link: "https://github.com/Saswatsusmoy",
       },
       {
         title: "FinanceScope - Finance Research Agent",
