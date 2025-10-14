@@ -40,11 +40,11 @@ export default function BlogsPage() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 font-sans">
       <SectionHeader title="Blogs" subtitle="ramblings of a sleep-deprived programmer" />
       
       {/* Tag Filter Section */}
-      <div className="space-y-4">
+      <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="text-sm font-medium text-[color:var(--foreground)]">
             Filter by tags
@@ -90,7 +90,7 @@ export default function BlogsPage() {
       )}
       
       {/* Blog Posts */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         {filteredPosts.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-[color:var(--muted)]">
@@ -108,11 +108,11 @@ export default function BlogsPage() {
             <article key={post.id} className="group">
               <Link 
                 href={`/blogs/${post.slug}`}
-                className="block p-6 rounded-lg border border-[color:var(--border)] hover:border-[color:var(--foreground)]/20 transition-all duration-200 hover:bg-[color:var(--background)]/50"
+                className="block p-4 rounded-md border border-[color:var(--border)] hover:border-[color:var(--foreground)]/20 transition-all duration-200 hover:bg-[color:var(--background)]/50 font-sans"
               >
-                <div className="space-y-3">
-                  <div className="flex items-start justify-between gap-4">
-                    <h2 className="text-xl font-semibold text-[color:var(--foreground)] group-hover:text-[color:var(--foreground)]/80 transition-colors">
+                <div className="space-y-2">
+                  <div className="flex items-start justify-between gap-3">
+                    <h2 className="text-lg font-semibold text-[color:var(--foreground)] group-hover:text-[color:var(--foreground)]/80 transition-colors">
                       {post.title}
                     </h2>
                     <div className="flex items-center gap-2 text-xs text-[color:var(--muted)] whitespace-nowrap">
@@ -120,18 +120,18 @@ export default function BlogsPage() {
                     </div>
                   </div>
                   
-                  <p className="text-[color:var(--muted)] leading-relaxed line-clamp-2">
+                  <p className="text-sm text-[color:var(--muted)] leading-relaxed line-clamp-2">
                     {post.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-sm text-[color:var(--muted)]">
+                    <div className="flex items-center gap-3 text-xs text-[color:var(--muted)]">
                       <span>{post.date}</span>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1.5">
                         {post.tags.map((tag, index) => (
                           <span 
                             key={index}
-                            className={`px-2 py-1 text-xs border rounded text-[color:var(--muted)] ${
+                            className={`px-1.5 py-0.5 text-xs border rounded text-[color:var(--muted)] ${
                               selectedTags.includes(tag)
                                 ? "bg-[color:var(--foreground)]/10 border-[color:var(--foreground)]/30"
                                 : "bg-[color:var(--background)] border-[color:var(--border)]"
@@ -143,7 +143,7 @@ export default function BlogsPage() {
                       </div>
                     </div>
                     
-                    <div className="text-sm text-[color:var(--muted)] group-hover:text-[color:var(--foreground)] transition-colors">
+                    <div className="text-xs text-[color:var(--muted)] group-hover:text-[color:var(--foreground)] transition-colors">
                       Read more →
                     </div>
                   </div>

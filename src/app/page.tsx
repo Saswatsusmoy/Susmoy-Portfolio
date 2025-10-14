@@ -1,7 +1,6 @@
 import TerminalHero from "@/components/TerminalHero";
 import SectionHeader from "@/components/SectionHeader";
 import ProjectCard from "@/components/ProjectCard";
-import Badge from "@/components/Badge";
 import Link from "next/link";
 import { data } from "@/data/site";
 
