@@ -7,12 +7,12 @@
   --muted: #a6a6a6;
   --panel: #1a1b20; /* panel surfaces */
   --border: #2a2b31;
-  --accent: #e95420; /* Ubuntu orange */
-  --accent-hover: #d04a1a;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
-  --info: #3b82f6;
+  --accent: #e6e6e6; /* Same as foreground */
+  --accent-hover: #e6e6e6;
+  --success: #e6e6e6;
+  --warning: #e6e6e6;
+  --error: #e6e6e6;
+  --info: #e6e6e6;
 }
 
 [data-theme="light"] {
@@ -25,12 +25,12 @@
   --panel-hover: #f1f5f9; /* slate-100 */
   --border: #e2e8f0; /* slate-200 */
   --border-hover: #cbd5e1; /* slate-300 */
-  --accent: #e95420; /* Ubuntu orange - same in both themes */
-  --accent-hover: #d04a1a;
-  --success: #059669; /* emerald-600 */
-  --warning: #d97706; /* amber-600 */
-  --error: #dc2626; /* red-600 */
-  --info: #2563eb; /* blue-600 */
+  --accent: #0f172a; /* Same as foreground */
+  --accent-hover: #0f172a;
+  --success: #0f172a; /* Same as foreground */
+  --warning: #0f172a; /* Same as foreground */
+  --error: #0f172a; /* Same as foreground */
+  --info: #0f172a; /* Same as foreground */
   --card: #ffffff;
   --card-hover: #f8fafc;
   --shadow: rgba(15, 23, 42, 0.08);
@@ -56,14 +56,14 @@
   --color-card-hover: var(--card-hover);
   --color-shadow: var(--shadow);
   --color-shadow-hover: var(--shadow-hover);
-  --font-sans: var(--font-ubuntu-sans);
-  --font-mono: var(--font-ubuntu-mono);
+  --font-sans: var(--font-jetbrains-mono);
+  --font-mono: var(--font-fira-code);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-ubuntu-sans), ui-sans-serif, system-ui;
+  font-family: var(--font-jetbrains-mono), 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

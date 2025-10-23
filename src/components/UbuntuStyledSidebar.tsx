@@ -50,14 +50,22 @@ const EmailIcon = () => (
 
 export default function UbuntuStyledSidebar() {
   const { theme } = useTheme();
-  const { socials } = data;
+  const { contact_section } = data;
 
-  const socialLinks = [
-    { href: socials.github, icon: <GithubIcon />, label: "GitHub" },
-    { href: socials.linkedin, icon: <LinkedinIcon />, label: "LinkedIn" },
-    { href: socials.x, icon: <XIcon />, label: "X (Twitter)" },
-    { href: socials.email, icon: <EmailIcon />, label: "Email" },
-  ].filter((link): link is typeof link & { href: string } => !!link.href);
+  const socialLinks = contact_section.socials.map(social => {
+    const iconMap: Record<string, React.ReactElement> = {
+      'GitHub': <GithubIcon />,
+      'LinkedIn': <LinkedinIcon />,
+      'X': <XIcon />,
+      'Email': <EmailIcon />,
+    };
+    
+    return {
+      href: social.url,
+      icon: iconMap[social.name] || <GithubIcon />,
+      label: social.name
+    };
+  });
 
   return (
     <div className="hidden xl:block fixed left-2 bottom-4 z-40">

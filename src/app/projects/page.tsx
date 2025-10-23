@@ -8,36 +8,34 @@ export default function ProjectsPage() {
     <div className="space-y-6">
       <SectionHeader title="Projects" subtitle="all projects" />
 
-      <div className="max-h-[60vh] overflow-y-auto">
-        <div className="space-y-1">
-          {data.projects.all_projects.map((p) => (
-            <div key={p.title} className="flex items-start gap-2">
-              <span className="text-[color:var(--muted)] text-xs mt-0.5">•</span>
-              <div className="flex-1 flex items-start justify-between gap-3">
-                <div>
-                  <span className="text-[color:var(--foreground)] text-sm">
-                    {p.title}
-                  </span>
-                  <div className="text-xs text-[color:var(--muted)] mt-0.5">
-                    {p.description}
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 flex-shrink-0">
-                  {p.link && p.link !== "#" && (
-                    <a
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
-                    >
-                      [link]
-                    </a>
-                  )}
+      <div className="space-y-1">
+        {data.projects.all_projects.map((p) => (
+          <div key={p.title} className="flex items-start gap-2">
+            <span className="text-[color:var(--muted)] text-xs mt-0.5">-</span>
+            <div className="flex-1 flex items-start justify-between gap-3">
+              <div>
+                <span className="text-[color:var(--foreground)] text-sm">
+                  {p.title}
+                </span>
+                <div className="text-xs text-[color:var(--muted)] mt-0.5">
+                  {p.description}
                 </div>
               </div>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                {p.link && p.link !== "#" && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
+                  >
+                    [link]
+                  </a>
+                )}
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       <div className="text-xs text-[color:var(--muted)] pt-2 border-t border-[color:var(--border)]">

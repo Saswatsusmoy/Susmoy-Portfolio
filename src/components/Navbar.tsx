@@ -6,19 +6,9 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const HamburgerIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <svg
-    className="w-5 h-5"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    {isOpen ? (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-    ) : (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-    )}
-  </svg>
+  <span className="text-xs text-[color:var(--muted)]">
+    {isOpen ? "×" : "☰"}
+  </span>
 );
 
 export default function Navbar() {
@@ -30,8 +20,7 @@ export default function Navbar() {
   const navigationLinks = [
     { href: "/", label: "home" },
     { href: "/projects", label: "projects" },
-    { href: "/blogs", label: "blogs" },
-    { href: "/recommendations", label: "recommendations" }
+    { href: "/blogs", label: "journal" }
   ];
 
   return (
@@ -42,9 +31,8 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2 hover:bg-[color:var(--panel)]/50 rounded-md px-2 py-1 transition-colors duration-200 group">
-              <div className="size-1.5 rounded-full bg-[color:var(--accent)] shadow-[0_0_10px_rgba(233,84,32,0.6)]" />
               <span className="font-mono text-xs text-[color:var(--muted)]">$</span>
-              <span className="font-mono text-xs text-[color:var(--foreground)] group-hover:text-[color:var(--accent)] transition-colors duration-200">
+              <span className="font-mono text-xs text-[color:var(--foreground)] group-hover:text-[color:var(--foreground)] transition-colors duration-200">
                 {data.person.alias?.toLowerCase() || data.person.name.toLowerCase()}
               </span>
             </Link>

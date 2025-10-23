@@ -11,7 +11,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
         <UbuntuStyledSidebar />
         <Navbar />
         <div className="mx-auto w-full max-w-screen-lg px-3 sm:px-4 md:px-6 lg:px-8">
-          <main className="py-4 sm:py-6 md:py-8 min-h-[calc(100dvh-64px-56px)]">{children}</main>
+          <main className="py-4 sm:py-6 md:py-8">{children}</main>
           <Footer />
         </div>
       </div>

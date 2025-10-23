@@ -10,11 +10,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-6 border-t border-[color:var(--border)]">
-      <div className="space-y-4">
+    <footer className="py-4 border-t border-[color:var(--border)]">
+      <div className="space-y-3">
         {/* Contact Section */}
         <div className="text-center">
-          <p className="text-[11px] text-[color:var(--muted)] mb-3">{data.contact_section.blurb}</p>
           <div className="flex items-center justify-center gap-3 text-[11px] text-[color:var(--muted)] flex-wrap">
             {data.contact_section.socials.map((s, i) => (
               <div key={s.name} className="flex items-center gap-3">

@@ -1,19 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Ubuntu, Ubuntu_Mono } from "next/font/google";
+import { JetBrains_Mono, Fira_Code } from "next/font/google";
 import "./globals.css";
 import ClientWrapper from "@/components/ClientWrapper";
 import { data } from "@/data/site";
 
-const ubuntuSans = Ubuntu({
-  variable: "--font-ubuntu-sans",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
 });
 
-const ubuntuMono = Ubuntu_Mono({
-  variable: "--font-ubuntu-mono",
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const viewport: Viewport = {
@@ -25,7 +25,6 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: data.site.title,
-  description: data.site.description,
   metadataBase: new URL(data.site.domain),
   icons: {
     icon: [
@@ -49,7 +48,6 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: data.site.title,
-    description: data.site.description,
     url: data.site.domain,
     siteName: data.person.name,
     locale: "en_US",
@@ -58,7 +56,6 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: data.site.title,
-    description: data.site.description,
   },
 };
 
@@ -69,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntuSans.variable} ${ubuntuMono.variable} antialiased min-h-dvh bg-background text-foreground`}>
+      <body className={`${jetbrainsMono.variable} ${firaCode.variable} antialiased bg-background text-foreground`}>
         <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
