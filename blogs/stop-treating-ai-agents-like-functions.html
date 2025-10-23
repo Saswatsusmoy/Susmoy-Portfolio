@@ -44,6 +44,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Fira+Code:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="saswatsusmoy - Journal" href="../feed.xml">
 </head>
 <body>
     <!-- Header -->
@@ -69,13 +72,15 @@
                 <!-- Blog content -->
                 <div class="blog-content">
                     <p>
-                        Okk,so few days back I was presenting an agent based system at an evaluation panel, and the panelists were referring the whole AI agent design as a glorified function call. It got me thinking about the fundamental difference between functions and agents. Yeah maybe there is a similarity but the difference is a bit fundamental.
+                        So few days back I was presenting an agent based system at an evaluation panel, and the panelists were referring the whole AI agent design as a glorified function call. It got me thinking about the difference between functions and agents. Yeah maybe there is a similarity but the difference is a bit fundamental.
                     </p>
-                    <p>You see, I have an analogy of what I reason between a function and an AI agent. I tend to think of functions as a coffee machine – simple, deterministic, and maybe offering 2-3 variations, that's it; whereas an AI agent is a barista: understands you, asks questions, remembers your preferences, adapts to your mood, and can prepare something creative just for you.</p>
+                    <p>
+                        You see, I have an analogy of what I reason between a function and an AI agent. I tend to think of functions as a coffee machine – simple, deterministic, and maybe offering 2-3 variations, that's it; whereas an AI agent is a barista: understands you, asks questions, remembers your preferences, adapts to your mood, and can prepare something creative just for you.
+                    </p>
 
                     <h2>Why Functions Just Don't Cut It</h2>
                     <p>
-                        <strong>Technical Perspective:</strong> AI agents are best modeled as partially observable Markov decision processes (POMDPs) with persistent state, memory modules, and policy-driven actuation, whereas function calls are stateless and deterministic, simply mapping <em>f(x) → y</em>. Unlike functions, LLM-based agents operate over sequences in time, adapting their memory and invoking tools in real time—so architecting them requires a whole different mindset than classic functional abstractions.
+                        <strong>Technical Perspective:</strong> AI agents are best modeled as Partially Observable Markov Decision Processes (POMDPs) with persistent state, memory modules, and policy-driven actuation, whereas function calls are stateless and deterministic, simply mapping <em>f(x) → y</em>. Unlike functions, LLM-based agents operate over sequences in time, adapting their memory and invoking tools in real time—so architecting them requires a whole different mindset than classic functional abstractions.
                     </p>
                     <div style="text-align: center; margin: 2em 0;">
                         <img src="../public/agent_execution.png" alt="Agent Execution Diagram" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 6px;">
@@ -99,8 +104,8 @@
                             </tr>
                             <tr>
                                 <td><strong>Memory</strong></td>
-                                <td>Goldfish memory – forgets everything</td>
-                                <td>Learns and remembers current and past state</td>
+                                <td>Goldfish memory – forget everything</td>
+                                <td>Learn and remember current and past state</td>
                             </tr>
                             <tr>
                                 <td><strong>How they work</strong></td>
@@ -119,18 +124,18 @@
                             </tr>
                             <tr>
                                 <td><strong>Testing</strong></td>
-                                <td>Simple unit tests</td>
+                                <td>Simple unit test</td>
                                 <td>Trace replays, Monte Carlo, mocks</td>
                             </tr>
                             <tr>
                                 <td><strong>When things break</strong></td>
-                                <td>Throws error and gives up</td>
-                                <td>Retries & usually produces output due to probabilistic nature of POMDPs (unless timeout)</td>
+                                <td>Throw an error and give up</td>
+                                <td>Retry & usually produce output due to probabilistic nature of POMDPs (unless timeout)</td>
                             </tr>
                             <tr>
                                 <td><strong>What to optimize</strong></td>
                                 <td>How fast it runs</td>
-                                <td>How effectively it solves tasks (fewer wasted tokens, smarter decisions, fewer steps, resourceful adaptation)</td>
+                                <td>How effectively it solve tasks (fewer wasted tokens, smarter decisions, fewer steps, resourceful adaptation)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -174,7 +179,7 @@
                         The workflow management part is where it gets tricky. You need something that can handle retries, timeouts, and all the edge cases that will inevitably break your agent. I spent weeks debugging why my agent would just... stop working randomly, and it turned out to be a timeout issue I never considered.
                     </p>
                     <p>
-                        And monitoring. You absolutely need monitoring. When your agent does something weird (and it will ps - it is a probabilistic function after all), you need to be able to trace back what happened. I can't tell you how many times I've had to dig through logs to figure out why my agent decided to generate same report for all users (inches away from a class action lawsuit).
+                        And monitoring. You absolutely need monitoring. When your agent does something weird (and it will ,PS: it is a probabilistic function after all), you need to be able to trace back what happened. I can't tell you how many times I've had to dig through logs to figure out why my agent decided to generate same report for all users (inches away from a class action lawsuit).
                     </p>
 
                     <h2>What NOT to Do (I Made These Mistakes So You Don't Have To)</h2>

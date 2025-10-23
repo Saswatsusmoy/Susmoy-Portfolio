@@ -1136,6 +1136,26 @@ a:hover {
   line-height: 1.5;
 }
 
+/* RSS Feed Link */
+.rss-link {
+  margin-top: var(--space-2);
+}
+
+.rss-link .link {
+  font-size: var(--font-size-xs);
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.rss-link .link:hover {
+  color: var(--accent);
+}
+
+.rss-link .link-symbol {
+  margin-right: var(--space-1);
+}
+
 /* Utility classes */
 .sr-only {
   position: absolute;
