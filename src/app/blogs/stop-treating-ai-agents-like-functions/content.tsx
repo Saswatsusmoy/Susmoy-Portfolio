@@ -133,7 +133,15 @@ export const metadata = {
         </li>
       </ol>
     </div>
-    
+    {/* Illustration: Agent Execution Loop */}
+    <div className="flex justify-center mb-8">
+      <img 
+        src="/agent_execution.png" 
+        alt="Agent execution loop abstract diagram"
+        className="rounded shadow-lg max-w-full h-auto"
+        style={{ maxHeight: 320, background: "var(--panel)", border: "1px solid var(--border)" }}
+      />
+    </div>
     <h3 className="text-base font-semibold mt-8 mb-4 text-[color:var(--foreground)]">What Your Agent Needs (The Good Stuff)</h3>
     <p className="mb-3 text-sm leading-relaxed">
     So here&apos;s the thing - your agent needs memory. Not just &quot;remember this one conversation&quot; memory, but actual working memory that keeps track of what&apos;s happening across multiple interactions. I&apos;ve seen too many agents that forget everything between calls, which is basically useless or in our case just a PR glorified probabilistic function.
