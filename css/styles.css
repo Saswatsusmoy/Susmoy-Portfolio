@@ -1146,6 +1146,9 @@ a:hover {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
 }
 
 .rss-link .link:hover {
@@ -1153,7 +1156,17 @@ a:hover {
 }
 
 .rss-link .link-symbol {
-  margin-right: var(--space-1);
+  margin-left: 0;
+}
+
+.rss-icon {
+  color: var(--muted);
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.rss-link .link:hover .rss-icon {
+  color: var(--accent);
 }
 
 /* Utility classes */
