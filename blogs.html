@@ -62,7 +62,7 @@
                     <h1 class="section-title">Journal</h1>
                     <p class="section-subtitle">ramblings of a sleep-deprived programmer</p>
                     <div class="rss-link">
-                        <a href="/feed.xml" class="link" target="_blank" rel="noopener noreferrer">
+                        <a href="/feed.xml" class="link rss-copy-link" id="rss-copy-btn">
                             <svg class="rss-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 11a9 9 0 0 1 9 9"></path>
                                 <path d="M4 4a16 16 0 0 1 16 16"></path>
@@ -70,6 +70,10 @@
                             </svg>
                             <span class="link-symbol">RSS</span>
                         </a>
+                    </div>
+                    <!-- Popup notification -->
+                    <div class="rss-popup" id="rss-popup">
+                        <span class="rss-popup-text">Link copied!</span>
                     </div>
                 </div>
             </section>

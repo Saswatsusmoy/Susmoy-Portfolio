@@ -281,6 +281,54 @@ class Utils {
   }
 }
 
+// RSS Copy functionality
+class RSSCopyManager {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.setupRSSCopy();
+  }
+
+  setupRSSCopy() {
+    const rssCopyBtn = document.getElementById('rss-copy-btn');
+    const rssPopup = document.getElementById('rss-popup');
+    
+    if (rssCopyBtn && rssPopup) {
+      rssCopyBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.copyRSSLink();
+        this.showPopup(rssPopup);
+      });
+    }
+  }
+
+  async copyRSSLink() {
+    const rssUrl = window.location.origin + '/feed.xml';
+    
+    try {
+      await navigator.clipboard.writeText(rssUrl);
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = rssUrl;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+  }
+
+  showPopup(popup) {
+    popup.classList.add('show');
+    
+    setTimeout(() => {
+      popup.classList.remove('show');
+    }, 2000);
+  }
+}
+
 // Error handling
 class ErrorHandler {
   static init() {
@@ -301,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navigationManager = new NavigationManager();
   const animationManager = new AnimationManager();
   const performanceOptimizer = new PerformanceOptimizer();
+  const rssCopyManager = new RSSCopyManager();
   
   // Initialize components
   const navbar = new Navbar();
